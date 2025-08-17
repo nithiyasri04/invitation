@@ -1,0 +1,42 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentine's Day</title>
+    <link rel="stylesheet" href="valentine.css">
+</head>
+<body>
+    <div class="valentine">
+        <h1>
+        Will you be my Valentine 💕
+        </h1>
+    </div>
+    <div class="option">
+        <button id="yes">Yes💖</button>
+        <button id="no">No😢</button>
+    </div>
+<script>
+const yesBtn = document.getElementById("yes");
+  const noBtn = document.getElementById("no");
+  const optionDiv = document.querySelector(".option");
+
+  // Yes button click shows message and removes buttons
+  yesBtn.addEventListener("click", () => {
+    document.querySelector(".valentine").innerHTML = "<h1>Awww... Thanks! 💖</h1>";
+    optionDiv.style.display = "none";
+  });
+
+  // No button dodges when mouse comes near
+  noBtn.addEventListener("mouseenter", () => {
+    const x = Math.random() * (window.innerWidth - noBtn.offsetWidth);
+    const y = Math.random() * (window.innerHeight - noBtn.offsetHeight);
+    noBtn.style.position = "absolute";
+    noBtn.style.left = x + "px";
+    noBtn.style.top = y + "px";
+  });
+
+</script>
+</body>
+</html>

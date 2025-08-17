@@ -1,0 +1,25 @@
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* full screen for everything */
+    font-family: Arial, sans-serif;
+    background-color: #ffe6e6;
+}
+
+.valentine {
+    text-align: center;
+    margin-bottom: 30px; /* space between heading and buttons */
+}
+
+.option {
+    display: flex;
+    gap: 20px; /* space between buttons */
+}
+
+#yes , #no {border: none;
+      background-color: rgb(236, 137, 192);
+      padding: 10px;
+      border-radius: 5px;}
